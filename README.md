@@ -1,15 +1,15 @@
 
 # Flutter Projesi
 
-  
 
 ![İstinye Üniversitesi](https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
 
-  
 
 ## Proje Hakkında
 
-Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmalarını, şehirlerin toplu taşımalarının bilgisisne ulaşmak. 
+Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmalarını, kullanıcıların, başkalarının da keşfetmesini istedikleri yerleri ekleyebildiği bir uygulama.
+
+
 
   
 
@@ -27,10 +27,13 @@ Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmaların
 
 ## Özellikler
 
-- [Kullanıcılar gezmek istedikleri şehirlerdeki en iyi konumları bulabilicek]
+- [Kullanıcıların takip ettiği kişilerin payalşımlarını bulunduran HomeScreen]
 
-- [kullanıcılar şehirde bulunan toplu taşıma hakkında bilgi sahibi olabilicek]
+- [Kullanıcının keşfettmek istediği yerleri araması için SearchScreen]
 
+- [Kullanıcıların post ekleyebildiği AddScreen]
+
+- [Kullanıcıların kendi profillerini düzenlediği ProfileScreen]
   
 
 ## Kullanılan Teknolojiler
@@ -38,6 +41,8 @@ Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmaların
 - Flutter
 
 - Dart
+
+- Lottie
 
 
 ## Başlangıç
@@ -50,10 +55,7 @@ Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmaların
 
 - Dart SDK (sürüm X.X.X)
 
-- [Diğer gerekli yazılımlar]
-
   
-
 ### Kurulum Adımları
 
 1. Projeyi bilgisayarınıza indirin:
@@ -118,7 +120,12 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
+![](assets/images/UygulamaEkranları/HomeScreen.png)
+![](assets/images/UygulamaEkranları/SearchScreen.png)
+![](assets/images/UygulamaEkranları/AddScreen.png)
+![](assets/images/UygulamaEkranları/ProfileScreen.png)
+
+## Demo Video
 
   
 

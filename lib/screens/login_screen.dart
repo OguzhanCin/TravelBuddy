@@ -57,6 +57,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: epostaYonetici,
                 decoration: InputDecoration(
                   hintText: "E-Posta",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -69,6 +72,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: sifreYonetici,
                 decoration: InputDecoration(
                   hintText: "Sifre",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -81,10 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                child: const Text("Giris Yap", style: TextStyle(fontSize: 16)),
+                child: Text("Giris Yap",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
               SizedBox(height: 12),
               ElevatedButton(
@@ -94,10 +103,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                child: const Text("Kayit Ol", style: TextStyle(fontSize: 16)),
+                child: Text("Kayit Ol",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
               SizedBox(height: 24),
               OutlinedButton.icon(
@@ -110,7 +122,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 icon: Image.asset('assets/icons/google_icon.png', height: 24),
                 label: Text("Google ile Giris Yap",
-                    style: TextStyle(fontSize: 16)),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
               SizedBox(height: 12),
               OutlinedButton.icon(
@@ -123,7 +137,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 icon: Image.asset('assets/icons/apple_icon.png', height: 24),
                 label: Text("Apple ID ile Giris Yap",
-                    style: TextStyle(fontSize: 16)),
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
             ],
           ),

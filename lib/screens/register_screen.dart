@@ -22,6 +22,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               TextField(
                 decoration: InputDecoration(
                   hintText: "Ad Soyad",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -32,6 +35,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               TextField(
                 decoration: InputDecoration(
                   hintText: "E-Posta",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -43,6 +49,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Sifre",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -54,6 +63,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: "Sifre Tekrar",
+                  hintStyle: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -68,10 +80,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: FilledButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                child: const Text("Kayit Ol", style: TextStyle(fontSize: 16)),
+                child: Text("Kayit Ol",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
               SizedBox(height: 12),
               OutlinedButton(
@@ -81,10 +96,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: OutlinedButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                child: const Text("Giris Yap", style: TextStyle(fontSize: 16)),
+                child: Text("Giris Yap",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontSize: 16)),
               ),
             ],
           ),

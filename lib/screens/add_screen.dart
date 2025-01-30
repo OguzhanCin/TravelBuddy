@@ -20,7 +20,9 @@ class AddScreen extends StatelessWidget {
         ),
         title: Text(
           "Yeni Gönderi",
-          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.onSecondary,
+              fontWeight: FontWeight.bold),
         ),
         centerTitle: false,
       ),
@@ -45,7 +47,7 @@ class AddScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
-              "Son Eklenen Fotoğraflar",
+              "Telefona Son Eklenen Fotoğraflar",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,

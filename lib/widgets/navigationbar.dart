@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/core/themes.dart';
 
 class BottomMenu extends StatelessWidget {
   const BottomMenu({super.key});

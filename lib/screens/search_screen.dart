@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/themes.dart';
 import '../widgets/navigationbar.dart';
 
 class SearchScreen extends StatelessWidget {

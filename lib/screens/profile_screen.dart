@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import '../core/themes.dart';
 import '../widgets/navigationbar.dart';
@@ -13,40 +12,68 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.surface,
-        title: Text(
-          'Kullanıcı Adı',
-          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
+        toolbarHeight: 120,
+        title: Row(
+          children: [
+            Icon(
+              CupertinoIcons.person_circle,
+              size: 80,
+              color: Theme.of(context).colorScheme.onSecondary,
+            ),
+            const SizedBox(width: 12),
+            Text(
+              'Kullanıcı Adı',
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onSecondary,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
-        actions: [],
       ),
-      backgroundColor: Theme.of(context).colorScheme.secondary,
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Positioned(
-            top: 16,
-            left: 16,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Icon(
-                  CupertinoIcons.person_circle,
-                  size: 80,
-                  color: Theme.of(context).colorScheme.onSecondary,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Kullanıcı adı',
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onSecondary,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+          const SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              "Gönderiler",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.onSecondary,
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+              ),
+              itemCount: 9,
+              itemBuilder: (context, index) {
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.primary,
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                ),
-              ],
+                  child: Icon(
+                    Icons.image,
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  ),
+                );
+              },
             ),
           ),
         ],
       ),
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       endDrawer: Drawer(
         child: Column(
           children: [

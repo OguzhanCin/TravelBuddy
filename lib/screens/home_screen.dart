@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_app/core/themes.dart';
 import '../widgets/navigationbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +12,9 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text(
           'Takip Ettiklerin',
-          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.onSecondary,
+              fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
@@ -33,21 +34,42 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: double.infinity,
-                  height: 250,
-                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                  child: Image.asset(
-                    "assets/images/gonderi${index + 1}.jpg",
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Icon(
-                        Icons.photo,
-                        size: 100,
-                        color: Theme.of(context).colorScheme.onSecondary,
-                      );
-                    },
-                  ),
+                Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 250,
+                      color:
+                          Theme.of(context).colorScheme.surfaceContainerHighest,
+                      child: Image.asset(
+                        "assets/images/gonderi${index + 1}.jpg",
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Icon(
+                            Icons.photo,
+                            size: 100,
+                            color: Theme.of(context).colorScheme.onSecondary,
+                          );
+                        },
+                      ),
+                    ),
+                    Positioned(
+                      top: 8,
+                      left: 8,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 4, horizontal: 8),
+                        color: Colors.black.withOpacity(0.2),
+                        child: Text(
+                          'Kullanıcı ${index + 1}',
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -55,19 +77,14 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Kullanıcı   ${index + 1}',
+                        'Mutlaka gezilmesi gereken bir yer',
                         style: TextStyle(
-                            color: Theme.of(context).colorScheme.onSecondary),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+                          color: Theme.of(context).colorScheme.onSecondary,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
                       ),
-                      SizedBox(height: 2),
-                      Text(
-                        '100 beğeni',
-                        style: TextStyle(
-                            color: Theme.of(context).colorScheme.onSecondary),
-                      ),
-                      SizedBox(height: 3),
+                      SizedBox(height: 8),
                       Row(
                         children: [
                           IconButton(
@@ -75,10 +92,23 @@ class HomeScreen extends StatelessWidget {
                             icon: const Icon(Icons.favorite_border),
                             onPressed: () {},
                           ),
+                          const SizedBox(width: 4),
+                          Text(
+                            '100 beğeni',
+                            style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onSecondary),
+                          ),
                           IconButton(
                             color: Theme.of(context).colorScheme.onSecondary,
                             icon: const Icon(Icons.comment_outlined),
                             onPressed: () {},
+                          ),
+                          Text(
+                            '100 Yorum',
+                            style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onSecondary),
                           ),
                         ],
                       ),
