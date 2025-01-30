@@ -1,20 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'core/routes.dart';
+import 'core/themes.dart';
 
 void main() {
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter widget'larını başlat
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
+    return MaterialApp.router(
+      title: 'Flutter App',
+      themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      routerConfig: router, // go_router yapılandırmamızı kullan
+      debugShowCheckedModeBanner: false, // Debug bandını kaldır
     );
   }
 }

@@ -7,7 +7,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: colors["primary"],
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -16,9 +16,8 @@ class SearchScreen extends StatelessWidget {
             title: TextField(
               decoration: InputDecoration(
                 hintText: "Ara...",
-                focusColor:Theme.of(context).colorScheme.onSecondary),
                 filled: true,
-                fillColor: Theme.of(context).colorScheme.surfaceVariant,
+                fillColor: Theme.of(context).colorScheme.surface,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: BorderSide.none,
@@ -55,7 +54,7 @@ class SearchScreen extends StatelessWidget {
                         return Icon(
                           Icons.photo,
                           size: 100,
-                          color: Theme.of(context).colorScheme.onSecondary,
+                          color: Theme.of(context).colorScheme.onPrimary,
                         );
                       },
                     ),

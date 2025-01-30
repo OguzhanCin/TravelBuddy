@@ -9,29 +9,27 @@
 
 ## Proje Hakkında
 
-[Projenin kısa tanımı ve amacı buraya yazılacak]
+Kullanıcıların gezmek istedikleri şehirlerdeki en iyi mekanları bulmalarını, şehirlerin toplu taşımalarının bilgisisne ulaşmak. 
 
   
 
 ## Ekibimiz
 
 -  **Danışman:**  
-[https://github.com/keyvanarasteh](Keyvan Arasteh)
+- [Keyvan Arasteh](https://github.com/keyvanarasteh)
 
 
 -  **Takım Üyeleri:**
 
-- X [GitHub](GitHub linki)
+- [Oğuzhan Berk Cin](https://github.com/OguzhanCin)
 
   
 
 ## Özellikler
 
-- [Ana özellik 1]
+- [Kullanıcılar gezmek istedikleri şehirlerdeki en iyi konumları bulabilicek]
 
-- [Ana özellik 2]
-
-- [Ana özellik 3]
+- [kullanıcılar şehirde bulunan toplu taşıma hakkında bilgi sahibi olabilicek]
 
   
 
@@ -41,9 +39,6 @@
 
 - Dart
 
-- [Diğer teknolojiler]
-
-  
 
 ## Başlangıç
 
@@ -65,7 +60,7 @@
 
 ```bash
 
-git  clone [proje-adresi]
+git  clone [https://github.com/OguzhanCin/TravelBuddy]
 
 ```
 
@@ -75,7 +70,7 @@ git  clone [proje-adresi]
 
 ```bash
 
-cd [proje-adı]
+cd [TravelBuddy]
 
 ```
 
@@ -149,7 +144,7 @@ lib/
 
 ## İletişim
 
-- Proje Bağlantısı: [GitHub repository linki]
+- Proje Bağlantısı: [https://github.com/OguzhanCin/TravelBuddy]
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
@@ -159,7 +154,6 @@ lib/
 
 - İstinye Üniversitesi'ne destekleri için teşekkür ederiz
 
-- [Diğer teşekkürler]
 
   
   

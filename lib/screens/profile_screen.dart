@@ -11,19 +11,18 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors["surface"],
-
-      // AppBar
       appBar: AppBar(
-        title: const Text('Kullanıcı Adı'),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: Text(
+          'Kullanıcı Adı',
+          style: TextStyle(color: Theme.of(context).colorScheme.onSecondary),
+        ),
         actions: [],
       ),
-
-      // Drawer (Yan Menü)
+      backgroundColor: Theme.of(context).colorScheme.secondary,
       endDrawer: Drawer(
         child: Column(
           children: [
-            // Drawer Header
             Container(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -62,7 +61,6 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
-
       bottomNavigationBar: BottomMenu(),
     );
   }

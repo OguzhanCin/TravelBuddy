@@ -62,12 +62,11 @@ class AddScreen extends StatelessWidget {
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
               ),
-              itemCount: 9, // Örnek olarak 9 fotoğraf
+              itemCount: 9,
               itemBuilder: (context, index) {
                 return Container(
                   decoration: BoxDecoration(
-                    color:
-                        Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                    color: Theme.of(context).colorScheme.primary,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(
