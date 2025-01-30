@@ -3,11 +3,12 @@ import 'package:go_router/go_router.dart';
 import '../screens/add_screen.dart';
 import '../screens/loading_screen.dart';
 import '../screens/home_screen.dart';
+import '../screens/login_screen.dart';
+import '../screens/register_screen.dart';
 import '../screens/search_screen.dart';
 
-// Router yapılandırması
 final router = GoRouter(
-  initialLocation: '/', // Başlangıç rotası
+  initialLocation: '/',
   routes: [
     GoRoute(
       path: '/',
@@ -28,6 +29,14 @@ final router = GoRouter(
     GoRoute(
       path: '/add',
       builder: (context, state) => const AddScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/register',
+      builder: (context, state) => const RegisterScreen(),
     ),
   ],
 );

@@ -54,7 +54,7 @@ class SearchScreen extends StatelessWidget {
                         return Icon(
                           Icons.photo,
                           size: 100,
-                          color: Theme.of(context).colorScheme.onPrimary,
+                          color: Theme.of(context).colorScheme.onSecondary,
                         );
                       },
                     ),

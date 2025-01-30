@@ -11,10 +11,8 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SizedBox.expand(
-        //width: double.infinity,
         child: Column(
           children: [
-            // Logo bölümü
             Expanded(
               child: Container(
                 width: 150,
@@ -25,12 +23,8 @@ class LoadingScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            // Yükleme ikonu
-            //CircularProgressIndicator(),
-
             InkWell(
-              onTap: () => context.go("/home"),
+              onTap: () => context.go("/login"),
               child: SizedBox(
                 width: 200,
                 child: DotLottieLoader.fromAsset(
@@ -45,7 +39,6 @@ class LoadingScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(height: 20),
           ],
         ),

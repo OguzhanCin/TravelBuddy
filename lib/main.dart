@@ -4,7 +4,7 @@ import 'core/routes.dart';
 import 'core/themes.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); // Flutter widget'larını başlat
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeProvider(),
@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
       themeMode: themeProvider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       theme: lightTheme,
       darkTheme: darkTheme,
-      routerConfig: router, // go_router yapılandırmamızı kullan
-      debugShowCheckedModeBanner: false, // Debug bandını kaldır
+      routerConfig: router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

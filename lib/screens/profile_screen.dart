@@ -20,6 +20,33 @@ class ProfileScreen extends StatelessWidget {
         actions: [],
       ),
       backgroundColor: Theme.of(context).colorScheme.secondary,
+      body: Stack(
+        children: [
+          Positioned(
+            top: 16,
+            left: 16,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  CupertinoIcons.person_circle,
+                  size: 80,
+                  color: Theme.of(context).colorScheme.onSecondary,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  'Kullanıcı adı',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
       endDrawer: Drawer(
         child: Column(
           children: [
@@ -40,20 +67,6 @@ class ProfileScreen extends StatelessWidget {
                       Provider.of<ThemeProvider>(context, listen: false)
                           .toggleTheme();
                     },
-                  ),
-                  const SizedBox(height: 20),
-                  Icon(
-                    CupertinoIcons.person_circle,
-                    size: 80,
-                    color: colors["onSecondary"],
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'Kullanıcı Adı',
-                    style: TextStyle(
-                      color: colors["onSecondary"],
-                      fontSize: 18,
-                    ),
                   ),
                 ],
               ),

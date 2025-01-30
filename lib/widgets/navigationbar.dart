@@ -9,12 +9,13 @@ class BottomMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Theme.of(context).colorScheme.surface,
       height: 50,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           IconButton(
-            color: colors["onSecondary"],
+            color: Theme.of(context).colorScheme.onSecondary,
             onPressed: () {
               context.go("/home");
             },
@@ -23,7 +24,7 @@ class BottomMenu extends StatelessWidget {
             ),
           ),
           IconButton(
-            color: colors["onSecondary"],
+            color: Theme.of(context).colorScheme.onSecondary,
             onPressed: () {
               context.go("/search");
             },
@@ -32,7 +33,7 @@ class BottomMenu extends StatelessWidget {
             ),
           ),
           IconButton(
-            color: colors["onSecondary"],
+            color: Theme.of(context).colorScheme.onSecondary,
             onPressed: () {
               context.push("/add");
             },
@@ -41,7 +42,7 @@ class BottomMenu extends StatelessWidget {
             ),
           ),
           IconButton(
-            color: colors["onSecondary"],
+            color: Theme.of(context).colorScheme.onSecondary,
             onPressed: () {
               context.go("/profile");
             },

@@ -27,7 +27,7 @@ const darkColors = {
   "primary": Color.fromARGB(255, 43, 75, 102), // Koyu mavi
   "onPrimary": Color.fromARGB(255, 42, 42, 42), // Koyu gri
   "secondary": Color.fromARGB(255, 45, 87, 102), // Koyu deniz mavisi
-  "onSecondary": Color.fromARGB(255, 153, 89, 15), // Koyu turuncu
+  "onSecondary": Color.fromARGB(255, 212, 246, 255), // Koyu turuncu
   "surface": Color.fromARGB(255, 18, 18, 18), // Koyu tema yüzey rengi
   "onSurface": Color.fromARGB(255, 43, 75, 102), // Koyu mavi
   "success": Color.fromARGB(255, 43, 75, 102), // Koyu mavi
